@@ -1,14 +1,15 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
+    <router-link to="/show">show</router-link>| 
+    <router-link to="/list">list</router-link>
+    <router-view></router-view>
   </div>
+  
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import HelloWorld from "@/components/index.vue";
 export default {
   name: "home",
   components: {
@@ -16,3 +17,9 @@ export default {
   }
 };
 </script>
+<style>
+	a {
+		color : red;
+		margin-right: 10px;
+	}
+</style>
